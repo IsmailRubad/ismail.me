@@ -1,7 +1,7 @@
 var timer;
 
 function setTimer() {
-  timer = setTimeout(showPage, 1000);
+  timer = setTimeout(showPage, 3000);
 }
 
 function showPage() {
@@ -9,6 +9,7 @@ function showPage() {
   document.querySelector(".loader").style.display = "none";
   // document.querySelector(".App").style.display = "block";
   document.querySelector(".App").style.visibility = "visible";
+  document.querySelector(".App").className += " App_anim";
 }
 
 
