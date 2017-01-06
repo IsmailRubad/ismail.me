@@ -1,7 +1,7 @@
 var timer;
 
 function setTimer() {
-  timer = setTimeout(showPage, 4000);
+  timer = setTimeout(showPage, 3000);
 }
 
 function showPage() {
