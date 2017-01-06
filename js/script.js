@@ -1,4 +1,19 @@
+var timer;
+
+function setTimer() {
+  timer = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  // document.getElementById("loader")
+  document.querySelector(".loader").style.display = "none";
+  // document.querySelector(".App").style.display = "block";
+  document.querySelector(".App").style.visibility = "visible";
+}
+
+
 $(function(){
+
 	$("a").click(function(){
 		if(this.hash){
 			// get rid of hash sign
@@ -17,6 +32,7 @@ $(function(){
 			// do not jump
 			return false;
 		}
+		return true;
 	});
 
 
@@ -28,9 +44,9 @@ $(function(){
 	}
 
 
-	$('.animated_element').on('click',function(){
+	/*$('.animated_element').on('click',function(){
 	  $(this).toggleClass('effect');
-	});
+	});*/
 
 	var $animation_elements = $('.animated_element');
 	var $window = $(window);
