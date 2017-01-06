@@ -14,6 +14,56 @@ body{
 	Courier New,monospace,serif;
 }
 
+.App{
+	position: relative;
+	animation-name: appAnimation;
+    animation-duration: .5s;
+    -webkit-animation-delay: 3s; /* Safari 4.0 - 8.0 */
+    animation-delay: 3s;
+}
+
+.loader{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 1;
+	background:white;
+	width:100px; height:100px;
+	animation-name: loader;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes loader {
+	0% {-webkit-transform: perspective( 600px ) rotateY( 180deg );
+	transform: perspective( 600px ) rotateY( 180deg );}
+    50% {-webkit-transform: perspective( 600px ) rotateX( 0deg );
+	transform: perspective( 600px ) rotateX( 0deg );}
+    100% {-webkit-transform: perspective( 600px ) rotateX( -180deg );
+	transform: perspective( 600px ) rotateX( -180deg );}
+}
+
+@-webkit-keyframes loader {
+	0% {-webkit-transform: perspective( 600px ) rotateY( 180deg );
+	transform: perspective( 600px ) rotateY( 180deg );}
+    50% {-webkit-transform: perspective( 600px ) rotateX( 0deg );
+	transform: perspective( 600px ) rotateX( 0deg );}
+    100% {-webkit-transform: perspective( 600px ) rotateX( -180deg );
+	transform: perspective( 600px ) rotateX( -180deg );}
+}
+
+
+@keyframes appAnimation{
+	0%{opacity: 0; top:200px;}
+	100%{opacity: 1; top:0px;}
+}
+
+@-webkit-keyframes appAnimation{
+	0%{opacity: 0; top:200px;}
+	100%{opacity: 1; top:0px;}
+}
+
 .clear_fix{
 	overflow: auto;
 	width: 100%;
@@ -245,6 +295,17 @@ elements*/
 	margin-top: 30px;
 	width: 50%;
 	float: right;
+	line-height: 1.5;
+	color: #a9a9a9;
+}
+
+.profile .details span{
+	color: #fff;
+}
+
+.profile .details h2,
+.profile .details p{
+    margin-bottom: 20px;
 }
 
 .contact{
@@ -323,7 +384,12 @@ elements*/
 
 
 .contact_info p{
+	line-height: 25px;
 	letter-spacing: 1px;
+}
+
+.contact_info p i{
+	color: #44B272;
 }
 
 .contact .contact_info span{
