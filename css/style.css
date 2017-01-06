@@ -18,8 +18,8 @@ body{
 	position: relative;
 	animation-name: appAnimation;
     animation-duration: .5s;
-    -webkit-animation-delay: 3s; /* Safari 4.0 - 8.0 */
-    animation-delay: 3s;
+    -webkit-animation-delay: 5s; /* Safari 4.0 - 8.0 */
+    animation-delay: 5s;
 }
 
 .loader{
