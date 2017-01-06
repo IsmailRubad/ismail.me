@@ -14,12 +14,12 @@ body{
 	Courier New,monospace,serif;
 }
 
-.App{
+.App_anim{
 	position: relative;
 	animation-name: appAnimation;
     animation-duration: .5s;
-    -webkit-animation-delay: 5s; /* Safari 4.0 - 8.0 */
-    animation-delay: 5s;
+    /*-webkit-animation-delay: 3s;*/
+    /*animation-delay: 3s;*/
 }
 
 .loader{
