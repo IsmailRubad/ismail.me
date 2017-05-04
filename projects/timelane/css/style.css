@@ -1,0 +1,296 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    display: inline-block;
+}
+
+html, body, .app_container{
+	height: 100%;
+}
+
+.login_area{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	color: white;
+    background-color: #4285F4;
+    font-weight: 100;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.center_content{
+	position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login_area img,
+.login_area p{
+	display: inline-block;
+}
+
+.lanes_container{
+    text-align: center;
+}
+
+.home_icon{
+    position: fixed;
+    left: 0;
+    top: 30px;
+    width: 70px;
+    height: 70px;
+}
+
+.home_icon img{
+    width: 100%;
+    height: 100%;
+}
+
+.welcome_text,
+.small_text{
+    margin: 20px 0px;
+}
+
+.lanes_area{
+    max-width: 677px;
+    margin: 0 auto;
+}
+
+#add_new_lane{
+    margin: 14px;
+    vertical-align: top;
+    width: 200px;
+    height: 200px;
+    background-color: #FF364C;
+    text-decoration: none;
+    font-size: 70px;
+    color: #fff;
+    box-sizing: border-box;
+    padding-top: 55px;
+}
+
+.addLane{
+    display: inline-block;
+    width: 300px;
+    background: #FF364C;
+    padding: 20px;
+    margin: 14px;
+}
+
+.lane_item{
+    position: relative;
+    margin: 14px;
+    width: 200px;
+    height: 200px;
+    vertical-align: top;
+    background-color: #71BF45;
+}
+
+.lane_item img{
+    width: 100%;
+    height: 100%;
+}
+
+.lane_item .lane_name{
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 0px;
+    width: 100%;
+    font-size: 30px;
+    background: rgba(0, 128, 0, 0.57);
+}
+
+.signout_btn{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 70px;
+    height: 70px;
+    background-color: #FF364C;
+    padding: 5px;
+}
+
+.signout_btn img{
+    width: 100%;
+    height: 100%;
+}
+
+.single_lane_info{
+    padding: 120px 30px;
+}
+
+.lane_info{
+    position: fixed;
+    right: 0;
+    top: 30px;
+}
+
+.lane_info img{
+    display: inline-block;
+    height: 62px;
+    width: 60px;
+    margin-right: 10px;
+}
+
+.lane_info p{
+    display: inline-block;
+    text-transform: capitalize;
+    background-color: #1466AD;
+    padding: 17px 30px;
+    color: #fff;
+    font-size: 24px;
+    vertical-align: top;
+}
+
+.event_container{
+    /*display: none;*/
+	width: 80%;
+	margin: 0 auto;
+}
+
+.single_day{
+}
+
+.event_date_area{
+	box-sizing: border-box;
+	padding-top: 5px;
+	width: 50px;
+    height: 50px;
+    float: left;
+    text-align: center;
+    color: #fff;
+    background-color: #1466AD;
+}
+
+.event_day{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 70px;
+    color: #1466AD;
+}
+
+.event_body{
+	border-left: 2px solid #1466AD;
+    padding: 30px 45px;
+    margin-left: 25px;
+}
+
+.event_name{
+    cursor: pointer;
+}
+
+.showDetails:after{
+    content: " [+]"
+}
+
+.dontShowDetails:after{
+    content: " [-]"
+}
+
+.event_description{
+    padding: 10px 20px;
+    border-left: 2px solid lightgray;
+    color: gray;
+    margin-top: 20px;
+}
+
+
+#create_new_event{
+    position: fixed;
+    bottom: 80px;
+    right: 0;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1466AD;
+    color: #ffffff;
+    font-size: 36px;
+    cursor: pointer;
+    font-weight: 600;
+    overflow: scroll;
+}
+
+.add_event{
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    width: 400px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #1466AD;
+}
+
+input{
+    height: 50px;
+}
+
+textarea{
+    height: 100px;
+}
+
+input, textarea{
+    width: 100%;
+    border: 0;
+    font-size: 24px;
+    color: white;
+    padding: 20px;
+    margin-bottom: 5px;
+    background-color: rgba(255,255,255,0.4);
+
+}
+
+input[type=date]{
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+
+button{
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    margin: 5px;
+    padding: 9px 30px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 480px){
+
+    #add_new_lane{
+        font-size: 50px;
+    }
+
+    .addLane{
+        margin: 3px;
+    }
+
+    #add_new_lane,
+    .lane_item{
+        width: 170px;
+        height: 170px;
+        margin: 3px;
+    }
+
+    ..add_event{
+        width: 340px;
+    }
+}
+
+
+
+
+
+
+

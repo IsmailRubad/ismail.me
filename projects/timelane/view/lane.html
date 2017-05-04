@@ -1,0 +1,41 @@
+<div class="single_lane_info">
+    <a href="#." class="home_icon"><img src="img/home_icon.png"></a>
+    <div class="lane_info">
+    	<img src="{{laneImgUrl}}">
+    	<p>{{laneName}}</p>
+    </div>
+	<div class="event_container">
+		<div ng-repeat="eventInfo in eventsInfo" class="single_day">
+		  <div class="event_title">
+		    <div class="event_date_area">
+		      <div class="month">{{eventInfo.month_name}}</div>
+		      <div class="date">{{eventInfo.day_date}}</div>
+		    </div>
+		    <div class="event_day">{{eventInfo.day_name}}</div>
+		  </div>
+		  <div ng-repeat="event in eventInfo.events" class="event_body">
+		    <div class="event_name" ng-click="showDetails = !showDetails">{{event.eventname}}<span class="showDetails" ng-class="{false:'showDetails', true:'dontShowDetails'}[showDetails]"></span></div>
+		    <div ng-show="showDetails" class="event_description">{{event.eventdesc}}</div>
+		  </div>
+		</div>
+	</div>
+
+	<div id="create_new_event" ng-click="showAddEventMenu=true">+</div>
+
+	<div class="add_event" ng-show="showAddEventMenu">
+		
+		<input type="text" placeholder="Title of the event" ng-model="event_title">
+
+		<textarea rows="4" cols="30" placeholder="Short description" ng-model="event_desc">
+
+		</textarea>
+
+		<input type="date" ng-model="date" value="{{ date | date: 'yyyy-MM-dd' }}" />
+
+		<button ng-click="createEvent();showAddEventMenu=false">Create</button>
+		<button ng-click="showAddEventMenu=false">Cancel</button>
+
+	</div>
+    <a href="#." class="signout_btn" ng-click="signOut()" title="Sign out"><img src="{{userImgUrl}}"></a>
+</div>
+
