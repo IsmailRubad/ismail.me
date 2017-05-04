@@ -182,7 +182,7 @@ mainApp.controller('LoginCtrl', ['$scope', '$rootScope',
 	    		
 	    		sessionStorage.clear();
 	    		
-	    		var base_url = window.location.origin;
+	    		var base_url = window.location.origin+"/ismail.me/projects/timelane";
 	    		
 	    		window.location = base_url;
 			
