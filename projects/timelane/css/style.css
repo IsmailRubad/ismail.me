@@ -222,11 +222,10 @@ html, body, .app_container{
 
 .add_event{
     position: fixed;
-    bottom: 50px;
+    bottom: 80px;
     right: 0;
     width: 400px;
     padding: 10px;
-    margin-top: 20px;
     background-color: #1466AD;
 }
 
@@ -283,8 +282,8 @@ button{
         margin: 3px;
     }
 
-    ..add_event{
-        width: 340px;
+    .add_event{
+        width: 95%;
     }
 }
 
