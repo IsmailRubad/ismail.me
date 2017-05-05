@@ -46,7 +46,7 @@ html, body, .app_container{
 .home_icon{
     position: fixed;
     left: 0;
-    top: 60px;
+    top: 30px;
     width: 70px;
     height: 70px;
 }
@@ -63,7 +63,7 @@ html, body, .app_container{
 
 .lanes_area{
     max-width: 677px;
-    margin: 45px 0 auto;
+    margin: 0 auto;
 }
 
 #add_new_lane{
