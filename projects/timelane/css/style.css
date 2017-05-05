@@ -141,6 +141,7 @@ html, body, .app_container{
     height: 62px;
     width: 60px;
     margin-right: 10px;
+    background-color: #71BF45;
 }
 
 .lane_info p{
