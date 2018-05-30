@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- Edit The description of your site in the next meta -->
+    <meta name="description" content="audio player">
+    <meta name="keywords" content="audio,audio player, mp3">
+    <meta name="author" content="Ismail Bin Dawud">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- The above meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+	<title>Audio Player</title>
+    <link rel="icon" type="image/ico" href="http://placehold.it/60/000000" />
+
+    <!-- Font awesome -->
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/audio-player.css">
+</head>
+<body>
+
+    <!--  Player container -->
+	<div class="player-container">
+        <div class="wrapper">
+
+            <!-- Top area -->
+            <div class="top-area">
+                <a class="track_area_toggle" href="#."><i class="fa fa-bars" aria-hidden="true"></i></a>
+                <img width="90" alt="player-image" src="img/app-img.jpg">
+                <div class="trackInfo">
+                    <h4 class="trackName">Paradise</h4>
+                    <p class="singerName">singer</p>
+                </div>
+                <div class="duration">
+                    <div class="clrfix">
+                        <p class="total_time floatLeft">00:00:00</p>
+                        <p class="current_time floatRight">00:00:00</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Action area -->
+            <div class="action-area">
+                <input id="seekbar" type="range" min="0" max="10" value="0" />
+                <ul>
+                    <li>
+                        <a class="download" href="#."><span class="fa fa-download"></span></a>
+                    </li>
+
+                    <li>
+                        <a href="#." id="btnPrev"><span class="fa fa-step-backward"></span></a>
+                    </li>
+
+                    <li class="play_pause">
+                        <a href="#." id="play"><span class="fa fa-play"></span></a>
+                        <a href="#." id="pause" class="hide" ><span class="fa fa-pause"></span></a>
+                    </li>
+
+                    <li >
+                        <a href="#." id="btnNext"><span class="fa fa-step-forward"></span></a>
+                    </li>
+
+                    <li class="repeat">
+                        <span class="count">0</span>
+                        <a href="#."><span class="fa fa-retweet"></span></a>
+                    </li>
+                 </ul>
+            </div>
+            <!-- End Action area -->
+
+            <!-- Track List area -->
+            <div class="track_area">
+                <div class="top-bar">
+                    <div class="search_area">
+                        <input type="text" id="search" placeholder="search">
+                        <a href="#.">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </div>
+                </div>
+                <ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--  End Player container -->
+
+<a href="min-version.html" style="width: 303px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 418px;
+    font-size: 28px;
+    color: red;"> See the minimum version</a>
+
+    <!--========================================
+        JavaScript Files
+    =========================================-->
+
+    <script type="text/javascript" src="js/ru_js.min.js"></script>
+    
+    <!-- ========== End JavaScript =================== -->
+</body>
+</html>

@@ -1,0 +1,436 @@
+/*
+===========================================================================
+ EXCLUSIVE ON https://envato.com/
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Project Name       : Audio Player
+ Author             : Ismail Bin Dawud
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Copyright (c) 2017 -  Ismail Bin Dawud - https://codecanyon.net/user/nivodev
+===========================================================================
+ Content Table
+===========================================================================
+[1] General
+[2] Full container
+[3] Top section
+[4] Track List area
+[5] Track Area show hide animarion
+[6] Action area
+[7] Responsive
+===========================================================================
+*/
+/* ====================
+[1] General
+==================== */
+
+.player-container h1,
+.player-container h2,
+.player-container h3,
+.player-container h4,
+.player-container p,
+.player-container ul{
+    margin: 0;
+    padding: 0;
+}
+.player-container a {
+    text-decoration: none;
+}
+.player-container a:hover,
+.player-container a:focus {
+    text-decoration: none;
+}
+.floatRight {
+    float: right;
+}
+.floatLeft {
+    float: left;
+}
+.clrfix {
+    overflow: auto;
+}
+/* ====================
+[2] Full container
+==================== */
+
+.player-container {
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    /*width: 300px;*/
+    width: 360px;
+    min-height: 73px;
+    background: #eee;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.player-container .wrapper {
+    position: relative;
+    background: #263238;
+    /*overflow: hidden;*/
+}
+/* ====================
+[3] Top section
+==================== */
+
+.top-area {
+    position: relative;
+    color: #ECF0F1;
+    padding-bottom: 25px;
+}
+.top-area .track_area_toggle {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: #ECF0F1;
+    background: #37474f;
+    width: 23px;
+    text-align: center;
+    height: 20px;
+    vertical-align: middle;
+    display: inline-block;
+    padding: 6px 3px 3px 3px;
+    border-radius: 3px;
+    transition: all .3s;
+}
+.top-area .track_area_toggle:active {
+    background: #263238;
+}
+.top-area img {
+    width: 100%;
+    /*height: 150px;*/
+    height: 180px;
+}
+.top-area .trackInfo {
+    padding: 5px 15px;
+    display: block;
+}
+.top-area .trackInfo .trackName {
+    font-size: 16px;
+    font-weight: bold;
+}
+.top-area .trackInfo .singerName {
+    font-size: 14px;
+    color: #BDBDBD;
+}
+.duration {
+    padding: 5px 15px;
+}
+.duration input {
+    width: 100%;
+}
+/* ====================
+[4] Track List area
+==================== */
+
+.track_area::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+.track_area::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
+}
+.track_area::-webkit-scrollbar-thumb {
+    background-color: #37474f;
+}
+.track_area {
+    box-sizing: border-box;
+    background: #666;
+    position: absolute;
+    width: 400px;
+    visibility: hidden;
+    bottom: 18px;
+    height: 300px;
+    left: 0;
+    overflow-y: scroll;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    z-index: -1;
+}
+.track_area .top-bar {
+    background: #1E2A35;
+    color: #ECF0F1;
+    padding: 18px 16px;
+    position: fixed;
+    overflow: auto;
+    z-index: 0;
+    width: 358px;
+}
+.top-bar .search_area {
+    display: inline-block;
+    position: relative;
+    float: right;
+}
+.top-bar .search_area a {
+    display: block;
+    /* font-size: 14px; */
+    
+    width: 22px;
+    background: #1e2a35;
+    text-align: right;
+    color: #ECF0F1;
+}
+.top-bar .search_area input {
+    position: absolute;
+    background: transparent;
+    border: none;
+    right: 1px;
+    z-index: -1;
+    color: #ffffff;
+    font-size: 17px;
+    padding: 2px 9px;
+    width: 130px;
+    border-bottom: 1px solid #ECF0F1;
+}
+.top-bar .search_area input:focus {
+    outline: none;
+}
+.track_area ul {
+    list-style: none;
+    padding: 10px 9px;
+    margin-top: 44px;
+}
+.track_area ul li {
+    padding: 15px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .12), 0 1px 6px rgba(0, 0, 0, .12);
+    background: #263238;
+    margin: 10px 0;
+}
+.track_area ul li.active {
+    background: #37474f;
+}
+.track_area ul li a {
+    padding: 5px 0px;
+    display: block;
+    color: #ECF0F1;
+}
+.track_area ul li.active a {
+    color: #ECF0F1;
+}
+.trackInfoList {
+    display: inline-block;
+    width: 80%;
+}
+.trackNameInList {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+}
+.singerNameInList {
+    font-size: 14px;
+    color: #BDBDBD;
+}
+.trackDurationInList {
+    background: #666666;
+    padding: 5px;
+    float: right;
+    border-radius: 2px;
+    min-height: 20px;
+    min-width: 35px;
+    box-sizing: border-box;
+    text-align: center;
+}
+/* ====================
+[5] Track Area show hide
+    animarion
+==================== */
+
+.show_track_area {
+    -webkit-animation-name: show_track_area_animation;
+    /* Safari 4.0 - 8.0 */
+    
+    -webkit-animation-duration: .3s;
+    /* Safari 4.0 - 8.0 */
+    
+    animation-name: show_track_area_animation;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+}
+.hide_track_area {
+    -webkit-animation-name: hide_track_area_animation;
+    /* Safari 4.0 - 8.0 */
+    
+    -webkit-animation-duration: .3s;
+    /* Safari 4.0 - 8.0 */
+    
+    animation-name: hide_track_area_animation;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes show_track_area_animation {
+    0% {
+        left: 0;
+        visibility: visible;
+    }
+    50% {
+        left: 390px;
+    }
+    100% {
+        left: 370px;
+        visibility: visible;
+    }
+}
+@keyframes hide_track_area_animation {
+    0% {
+        left: 370px;
+        visibility: visible;    
+    }
+    80% {
+        left: 390px;
+    }
+    100% {
+        left: 0px;
+        visibility: hidden;
+    }
+}
+
+
+/* ====================
+[6] Action area
+==================== */
+
+.action-area {
+    position: relative;
+    padding: 13px 0;
+    background: #37474f;
+}
+.action-area ul {
+    text-align: center;
+}
+.action-area ul li {
+    display: inline-block;
+}
+.action-area ul li a {
+    font-size: 13px;
+    display: inline-block;
+    color: #ECF0F1;
+    width: 45px;
+    margin: 0 2px;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding-top: 12px;
+    height: 42px;
+    border-radius: 50%;
+    transition: all .3s;
+}
+.action-area ul li a:active {
+    background: #263238;
+}
+.action-area ul li.play_pause a {
+    width: 50px !important;
+    height: 48px !important;
+    background: #263238;
+    border-radius: 50%;
+    position: relative;
+    padding: 16px 0;
+    top: -3px;
+}
+.action-area li.repeat {
+    position: relative;
+}
+.action-area li.repeat span.count {
+    position: absolute;
+    display: inline-block;
+    color: #ecf0f1;
+    background: #1e2a35;
+    padding: 1px 4px;
+    font-size: 11px;
+    border-radius: 9px;
+    top: 6px;
+    right: 10px;
+}
+.hide {
+    display: none !important;
+}
+#seekbar {
+    position: absolute;
+    top: -6px;
+    left: 0;
+}
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    /*margin: 0 0 15px 0;*/
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/
+    
+    background: #d3d3d3;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0.9px 0.9px 1px #000031, 0px 0px 0.9px #00004b;
+    /*border: 1.8px solid #00001e;*/
+    
+    height: 18px;
+    width: 18px;
+    border-radius: 15px;
+    background: #1E2A35;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7px;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: black;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: black;
+}
+
+
+/* ====================
+[7] Responsive
+==================== */
+
+@media only screen and (max-width: 720px) {
+    .player-container{
+        overflow: hidden;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 310px;
+    }
+    .track_area{
+        z-index: 1;
+        width: 310px;
+        height: 335px;
+    }
+    .track_area .top-bar{
+        width: 270px;
+    }
+    @keyframes show_track_area_animation {
+        
+        0% {
+            top: 300;
+            visibility: visible;
+        }
+        
+        50%{
+            top: 0;
+            visibility: visible;
+        }
+        100% {
+            top: 40px;
+            visibility: visible;
+        }
+    }
+    @keyframes hide_track_area_animation {
+
+        0%{
+            top: 40px;
+            visibility: visible;
+        }
+        50%{
+            top: 0px;
+            visibility: visible;
+        }
+        100%{
+            top: 300px;
+            visibility: hidden;
+        }
+    }
+}

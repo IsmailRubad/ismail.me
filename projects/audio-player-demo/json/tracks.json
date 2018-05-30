@@ -1,0 +1,48 @@
+{
+	"tracks": 
+	[
+		
+		{
+            "track": 1,
+            "name": "This is nobody",
+            "singer": "Nobody",
+            "length": "0:27",
+            "file": "track1"
+        },
+        {
+            "track": 2,
+            "name": "This is the life",
+            "singer": "Dead",
+            "length": "0:23",
+            "file": "track2"
+        },
+        {
+            "track": 3,
+            "name": "I don't see when I close eyes",
+            "singer": "Closer",
+            "length": "0:28",
+            "file": "track3"
+        },
+        {
+            "track": 4,
+            "name": "I was a drop out so I didn't made it",
+            "singer": "Dropper",
+            "length": "0:30",
+            "file": "track4"
+        },
+        {
+            "track": 5,
+            "name": "If there were fishes in the lake",
+            "singer": "Fisher",
+            "length": "0:27",
+            "file": "track5"
+        },
+        {
+            "track": 6,
+            "name": "When your dreams make no sense to me",
+            "singer": "Dreamer",
+            "length": "0:27",
+            "file": "track6"
+        }
+	]
+}
